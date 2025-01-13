@@ -1,0 +1,222 @@
+/* Stilizare pentru corpul paginii */
+body {
+    display: flex; /* Folosește Flexbox pentru alinierea conținutului */
+    flex-direction: column; /* Dispunere verticală */
+    min-height: 100vh; /* Înălțimea minimă va fi 100% din înălțimea ferestrei */
+    margin: 0; /* Elimină marginea implicită */
+    background-color: burlywood; /* Fundal de culoare burlywood */
+}
+
+/* Stilizare pentru secțiunea principală */
+main {
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    flex: 1; /* Ocupă tot spațiul disponibil */
+}
+
+/* Stilizare pentru header */
+header {
+    background: black; /* Fundal negru */
+    height: 70px; /* Înălțimea header-ului */
+    display: grid; /* Folosește grid pentru alinierea elementelor */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    color: white; /* Text alb */
+}
+
+/* Stilizare pentru titlul header-ului */
+.titlu {
+    font-size: 1.5rem; /* Mărimea fontului pentru titlu */
+}
+
+/* Stilizare pentru nav */
+nav {
+    flex: 0 0 10vw; /* Lățimea navigației va fi 10% din lățimea ferestrei */
+    background: #FAF4B7; /* Fundal de culoare galben deschis */
+    order: inherit; /* Păstrează ordinea default */
+}
+
+/* Stilizare pentru dropdown */
+.dropdown {
+    position: relative; /* Poziționează relativ față de părinte */
+    display: inline-block; /* Afișează în linie */
+}
+
+/* Stilizare pentru butonul din dropdown */
+.dropbtn {
+    padding: 16px; /* Spațiu în interiorul butonului */
+    font-size: 5px; /* Mărimea fontului */
+    border: none; /* Fără bordură */
+    align-self: center; /* Centrează butonul pe verticală */
+    background: #FAF4B7; /* Fundal galben deschis */
+}
+
+/* Stilizare pentru conținutul dropdown-ului */
+.dropdown-content {
+    display: none; /* Inițial ascuns */
+    position: absolute; /* Poziționare absolută față de părinte */
+    left: 15px; /* Poziționat la 15px față de stânga */
+    background-color: #f1f1f1; /* Fundal gri deschis */
+    min-width: 160px; /* Lățimea minimă a dropdown-ului */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Umbra dropdown-ului */
+    z-index: 1; /* Pune dropdown-ul deasupra altor elemente */
+    border-radius: 5px; /* Colțuri rotunjite */
+}
+
+/* Afișează dropdown-ul la hover pe elementul părinte */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afișează dropdown-ul la hover */
+}
+
+/* Stilizare pentru linkurile din dropdown */
+.dropdown-content a {
+    color: black; /* Culoarea textului */
+    padding: 12px 20px; /* Spațiu în jurul textului */
+    text-decoration: none; /* Elimină sublinierea */
+    display: block; /* Afișează linkul pe linie */
+}
+
+/* Stilizare pentru linkurile din dropdown la hover */
+.dropdown-content a:hover {
+    background-color: #eea3a3; /* Fundal roz deschis la hover */
+}
+
+/* Stilizare pentru articol */
+article {
+    flex: 1; /* Ocupă tot spațiul disponibil */
+    background: burlywood; /* Fundal de culoare burlywood */
+    padding: 30px; /* Spațiu în interior */
+    border-radius: 8px; /* Colțuri rotunjite */
+}
+
+/* Stilizare pentru întrebări */
+.question {
+    background: #a6bb6c; /* Fundal verde deschis */
+    margin-bottom: 20px; /* Marjinează jos */
+    padding: 15px; /* Spațiu în interior */
+    border-radius: 8px; /* Colțuri rotunjite */
+    text-align: center; /* Aliniază textul la centru */
+}
+
+/* Stilizare pentru imagini din întrebări */
+.question img {
+    max-width: 100%; /* Lățimea maximă a imaginii va fi 100% */
+    height: auto; /* Înălțimea imaginii va fi proporțională cu lățimea */
+    border-radius: 8px; /* Colțuri rotunjite pentru imagine */
+    margin-bottom: 10px; /* Spațiu jos */
+}
+
+/* Stilizare pentru opțiuni */
+.options {
+    display: flex; /* Folosește Flexbox pentru a alinia opțiunile */
+    justify-content: space-around; /* Distribuie opțiunile pe orizontală */
+    margin-top: 10px; /* Marjinează sus */
+}
+
+/* Stilizare pentru fiecare opțiune */
+.option {
+    background: white; /* Fundal alb */
+    font-size: 1.5rem; /* Mărimea fontului */
+    padding: 20px; /* Spațiu în interior */
+    border-radius: 8px; /* Colțuri rotunjite */
+    cursor: pointer; /* Schimbă cursorul la hover */
+    transition: transform 0.2s; /* Adaugă o tranziție la transformări */
+    width: 20%; /* Lățimea opțiunii */
+    text-align: center; /* Aliniază textul la centru */
+}
+
+/* Stilizare pentru opțiune la hover */
+.option:hover {
+    transform: scale(1.1); /* Mărire la hover */
+    background: lightgray; /* Fundal gri deschis la hover */
+}
+
+/* Stilizare pentru opțiune selectată */
+.option.selected {
+    background: #4caf50; /* Fundal verde pentru opțiunea selectată */
+    color: white; /* Culoare text alb */
+    font-weight: bold; /* Text îngroșat */
+}
+
+/* Stilizare pentru footer */
+footer {
+    background: black; /* Fundal negru */
+    height: 50px; /* Înălțimea footer-ului */
+    text-align: center; /* Aliniază textul la centru */
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    color: #F9F9F9; /* Text alb deschis */
+}
+
+/* Stilizare pentru secțiunea home */
+.home {
+    height: 40px; /* Înălțimea secțiunii */
+    display: block; /* Comportament de bloc */
+    margin: 0 auto; /* Marjinează automat pe orizontală */
+}
+
+/* Stilizare pentru titlul paginii */
+.titlu {
+    background: black; /* Fundal negru */
+    height: 8px; /* Înălțimea titlului */
+    text-align: center; /* Aliniază textul la centru */
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    color: #F9F9F9; /* Culoare albă pentru text */
+}
+
+/* Stilizare pentru butonul de submit */
+#submitButton {
+    font-size: 1.5rem; /* Mărimea fontului */
+    font-weight: bold; /* Îngroșează fontul */
+    background-color: #ff5733; /* Fundal portocaliu */
+    color: white; /* Culoare text alb */
+    padding: 15px 25px; /* Spațiu în interior */
+    border: none; /* Fără bordură */
+    border-radius: 10px; /* Colțuri rotunjite */
+    cursor: pointer; /* Schimbă cursorul la hover */
+    transition: background-color 0.3s, transform 0.2s; /* Tranziții pentru fundal și transformări */
+    margin: 20px auto; /* Marjinează automat pe orizontală */
+    display: block; /* Afișează butonul pe linie */
+    text-align: center; /* Aliniază textul la centru */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Umbra butonului */
+}
+
+/* Stilizare pentru butonul de submit la hover */
+#submitButton:hover {
+    background-color: #e64520; /* Fundal mai închis la hover */
+    transform: scale(1.1); /* Mărire la hover */
+}
+
+/* Stilizare pentru elementele ascunse */
+.hidden {
+    display: none; /* Ascunde elementul */
+}
+
+/* Stilizare pentru afișarea scorului */
+#scoreDisplay {
+    font-size: 1.5rem; /* Mărimea fontului */
+    font-weight: bold; /* Îngroșează fontul */
+    color: #333; /* Culoare text gri închis */
+    background-color: #f1f1f1; /* Fundal gri deschis */
+    padding: 15px 20px; /* Spațiu în interior */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Umbra */
+    text-align: center; /* Aliniază textul la centru */
+    max-width: 80%; /* Lățimea maximă */
+    margin: 20px auto; /* Marjinează automat pe orizontală */
+    animation: fadeIn 0.5s ease-in-out; /* Adaugă animația de apariție */
+}
+
+/* Definirea animației de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* La început, opacitatea este 0 */
+        transform: translateY(-20px); /* Mutați elementul sus */
+    }
+    to {
+        opacity: 1; /* La final, opacitatea devine 1 */
+        transform: translateY(0); /* Elementul revine la poziția originală */
+    }
+}

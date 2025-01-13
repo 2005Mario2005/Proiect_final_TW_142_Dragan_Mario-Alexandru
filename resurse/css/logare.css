@@ -1,0 +1,187 @@
+/* Stilizarea corpului pentru pagina de login */
+body {
+    font-family: Arial, sans-serif; /* Setează fontul */
+    background: rgb(232, 239, 147); /* Fundal deschis */
+    margin: 0; /* Elimină marginile implicite */
+    padding: 0; /* Elimină padding-ul implicit */
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    height: 100vh; /* Înălțimea totală a ferestrei browserului */
+}
+
+/* Stilizarea containerului pentru aplicație */
+#app {
+    width: 100%; /* Lățime 100% */
+    max-width: 400px; /* Lățime maximă */
+    background: #fff; /* Fundal alb */
+    padding: 20px; /* Spațiu în interior */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbra */
+    text-align: center; /* Aliniere text */
+}
+
+/* Stilizare pentru titluri */
+h1, h2 {
+    color: #333; /* Culoarea textului */
+}
+
+/* Stilizarea containerului de butoane */
+.button-container {
+    display: flex; /* Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    gap: 10px; /* Spațiu între butoane */
+}
+
+/* Stilizarea butoanelor */
+button {
+    background: #007bff; /* Fundal albastru */
+    color: white; /* Text alb */
+    border: none; /* Fără bordură */
+    padding: 10px 15px; /* Spațiu în interior */
+    border-radius: 5px; /* Colțuri rotunjite */
+    cursor: pointer; /* Schimbă cursorul la hover */
+    margin-top: 10px; /* Spațiu deasupra butonului */
+}
+
+/* Schimbă culoarea butonului la hover */
+button:hover {
+    background: #0056b3; /* Fundal mai închis la hover */
+}
+
+/* Etichete pentru inputuri */
+label {
+    display: block; /* Afișează eticheta ca element de bloc */
+    margin-top: 10px; /* Marjinează la început */
+    font-weight: bold; /* Text îngroșat */
+    color: #333; /* Culoare text */
+}
+
+/* Stilizare pentru inputuri */
+input {
+    width: 100%; /* Lățime completă */
+    padding: 8px; /* Spațiu în interior */
+    margin-top: 5px; /* Marjinează la început */
+    margin-bottom: 10px; /* Marjinează jos */
+    border: 1px solid #ccc; /* Bordură gri deschis */
+    border-radius: 5px; /* Colțuri rotunjite */
+}
+
+/* Container pentru câmpul de parolă */
+.password-container {
+    display: flex; /* Folosește Flexbox */
+    align-items: center; /* Aliniați elementele pe verticală */
+}
+
+/* Buton pentru vizibilitatea parolei */
+.password-container button {
+    margin-left: 10px; /* Marjinează la stânga */
+    padding: 5px; /* Spațiu în interior */
+}
+
+/* Stilizarea mesajelor de eroare */
+.error {
+    color: red; /* Culoare roșie pentru erori */
+    font-size: 12px; /* Mărimea fontului */
+    margin-top: 5px; /* Marjinează sus */
+    display: none; /* Inițial ascuns */
+}
+
+/* Stilizarea popup-ului */
+.popup {
+    position: fixed; /* Poziționare fixă */
+    top: 50%; /* Plasat în mijloc pe verticală */
+    left: 50%; /* Plasat în mijloc pe orizontală */
+    transform: translate(-50%, -50%); /* Centrează exact pe ecran */
+    background: #fff; /* Fundal alb */
+    padding: 20px; /* Spațiu în interior */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Umbra popup-ului */
+    z-index: 1000; /* Pune popup-ul deasupra altor elemente */
+    display: none; /* Inițial ascuns */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+}
+
+/* Mesajul din popup */
+.popup-message {
+    background: white; /* Fundal alb */
+    padding: 20px; /* Spațiu în interior */
+    border-radius: 5px; /* Colțuri rotunjite */
+}
+
+/* Stilizarea când popup-ul este activ */
+.active {
+    display: block; /* Afișează popup-ul */
+}
+
+/* Stilizarea când un element este ascuns */
+.hidden {
+    display: none; /* Ascunde elementul */
+}
+
+/* Stilizarea butonului pentru închidere */
+#close-popup {
+    margin-top: 10px; /* Marjinează la sus */
+}
+
+/* Dropdown pentru meniu */
+.dropdown {
+    position: absolute; /* Poziționare absolută */
+    top: 10px; /* Plasat sus */
+    left: 10px; /* Plasat la stânga */
+}
+
+/* Stilizarea butonului din dropdown */
+.dropbtn {
+    padding: 10px 20px; /* Spațiu în interior */
+    font-size: 14px; /* Mărimea fontului */
+    border: none; /* Fără bordură */
+    background: rgb(131, 138, 53); /* Fundal de culoare verde pal */
+    color: #333; /* Culoarea textului */
+    cursor: pointer; /* Schimbă cursorul la hover */
+    border-radius: 4px; /* Colțuri rotunjite */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Umbra butonului */
+}
+
+/* Stilizarea conținutului dropdown */
+.dropdown-content {
+    display: none; /* Inițial ascuns */
+    position: absolute; /* Poziționare absolută */
+    background-color: #e9deaf; /* Fundal deschis */
+    min-width: 160px; /* Lățime minimă */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Umbra dropdown-ului */
+    z-index: 1; /* Pune dropdown-ul deasupra altor elemente */
+    border-radius: 4px; /* Colțuri rotunjite */
+}
+
+/* Stilizarea linkurilor din dropdown */
+.dropdown-content a {
+    color: #333; /* Culoarea textului */
+    padding: 12px 16px; /* Spațiu în jurul textului */
+    text-decoration: none; /* Elimină sublinierea */
+    display: block; /* Face linkurile blocuri */
+    font-size: 14px; /* Mărimea fontului */
+}
+
+/* Hover pentru linkurile din dropdown */
+.dropdown-content a:hover {
+    background-color: #ffd580; /* Fundal galben la hover */
+}
+
+/* Afișează dropdown-ul când butonul este hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afișează meniul la hover */
+}
+
+/* Schimbă culoarea butonului la hover */
+.dropbtn:hover {
+    background-color: #8d9d30; /* Fundal mai închis la hover */
+}
+
+/* Stilizarea secțiunii Home */
+.home {
+    height: 40px; /* Înălțimea secțiunii */
+    display: block; /* Comportament de bloc */
+    margin: 20px auto; /* Margină automată pe orizontală */
+}

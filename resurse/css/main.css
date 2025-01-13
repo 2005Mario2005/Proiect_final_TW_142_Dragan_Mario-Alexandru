@@ -1,0 +1,477 @@
+/* Stiluri globale pentru body */
+body {
+    display: flex; /* Activează Flexbox pentru alinierea elementelor */
+    min-height: 100vh; /* Asigură că body-ul ocupă toată înălțimea vizibilă a ecranului */
+    margin: 0; /* Elimină marginile implicite */
+    flex-direction: column; /* Aranjează elementele principale pe verticală */
+}
+
+/* Stiluri pentru main */
+main {
+    display: flex; /* Activează Flexbox pentru elementele din main */
+    flex: content; /* Permite main să ocupe spațiu în funcție de conținut */
+}
+
+/* Stiluri pentru #main-content */
+#main-content {
+    background: burlywood; /* Fundal de culoare burlywood */
+    padding: 20px; /* Adaugă padding în jurul conținutului */
+}
+
+/* Stiluri pentru boxurile #overview-box, #about-box, #motivation-box */
+#overview-box, #about-box, #motivation-box {
+    background-color: #a6bb6c; /* Fundal verde deschis */
+    color: white; /* Text alb */
+    text-align: left; /* Aliniere a textului la stânga */
+    padding: 20px; /* Padding pentru conținut */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adaugă umbră ușoară */
+    transition: max-height 1s ease, box-shadow 1s ease; /* Tranziție pentru max-height și umbră la hover */
+}
+
+/* Stiluri pentru conținutul din boxuri */
+#overview-content, #about-content, #motivation-content {
+    padding: 10px; /* Padding pentru conținut */
+    max-height: 15px; /* Limitează înălțimea conținutului */
+    overflow: hidden; /* Ascunde conținutul care depășește max-height */
+    transition: max-height 2s ease; /* Tranziție pentru max-height */
+    font-size: 22px; /* Mărimea fontului */
+    color: black; /* Culoare text */
+}
+
+/* Stiluri pentru titlurile din boxuri */
+#overview-title, #about-title, #motivation-title {
+    text-align: center; /* Aliniere pe centru pentru titluri */
+    font-size: 20px; /* Mărimea fontului */
+    margin-top: 0; /* Elimină marginea de sus */
+}
+
+/* Efect de hover pentru boxuri */
+#overview-box:hover, #about-box:hover, #motivation-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Umbră mai mare la hover */
+}
+
+/* Expandează conținutul la hover */
+#overview-box:hover #overview-content,
+#about-box:hover #about-content,
+#motivation-box:hover #motivation-content {
+    max-height: 2500px; /* Permite expansiunea conținutului */
+}
+
+/* Stiluri suplimentare pentru boxuri (adăugate pentru claritate) */
+#overview-box, #about-box, #motivation-box {
+    margin-bottom: 20px; /* Adaugă distanțare la partea de jos */
+}
+
+/* Stiluri pentru nav (bara de navigație) */
+main > nav {
+    flex: 0 0 10vw; /* Lățimea nav-ului este 10% din lățimea viewport-ului */
+    background: #FAF4B7; /* Fundal galben deschis */
+    order: inherit; /* Păstrează ordinea implicită */
+}
+
+/* Stiluri pentru aside (bara laterală) */
+main > aside {
+    flex: 0 0 16vw; /* Lățimea aside-ului este 16% din lățimea viewport-ului */
+    background: #c4b72c; /* Fundal galben închis */
+    border-radius: 10cm; /* Colțuri rotunjite foarte mari */
+    height: 12.5cm; /* Înălțimea aside-ului */
+    align-self: center; /* Centrează aside-ul pe axa verticală */
+    margin-right: 37px; /* Distanțare la dreapta */
+}
+
+/* Stiluri pentru header */
+header {
+    background: black; /* Fundal negru */
+    height: 50px; /* Înălțimea header-ului */
+}
+
+/* Stiluri pentru footer */
+footer {
+    background: black; /* Fundal negru */
+    height: 20px; /* Înălțimea footer-ului */
+    text-align: center; /* Aliniere pe centru */
+    display: flex; /* Folosește Flexbox */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    color: #F9F9F9; /* Culoare text albă */
+}
+
+/* Stiluri comune pentru header, footer, article, nav, aside */
+header, footer, article, nav, aside {
+    padding: 1em; /* Padding uniform */
+}
+
+/* Stiluri pentru imaginea home */
+.home {
+    height: 40px; /* Înălțimea imaginii */
+    display: block; /* Folosește Flexbox pentru alinierea imaginii */
+    margin: 0 auto; /* Centrează imaginea pe orizontală */
+}
+
+/* Stiluri pentru titluri */
+.titlu {
+    background: black; /* Fundal negru */
+    height: 8px; /* Înălțimea titlului */
+    text-align: center; /* Aliniere pe centru */
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    color: #F9F9F9; /* Culoare albă pentru text */
+}
+
+/* Stiluri pentru linkuri din nav */
+nav > a {
+    text-align: center; /* Aliniere pe centru */
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    font-size: 0.5cm; /* Mărimea fontului */
+    color: inherit; /* Păstrează culoarea moștenită */
+    text-decoration: none; /* Elimină sublinierea */
+}
+
+/* Stiluri pentru linkuri din aside */
+aside > a {
+    display: flex; /* Flexbox pentru aliniere */
+    margin-left: 0.2cm; /* Distanțare la stânga */
+    font-size: 0.4cm; /* Mărimea fontului */
+    color: inherit; /* Păstrează culoarea moștenită */
+    text-decoration: none; /* Elimină sublinierea */
+}
+
+/* Stiluri pentru imaginea Eu */
+.Eu {
+    height: 6cm; /* Înălțimea imaginii */
+    border-radius: 17%; /* Colțuri rotunjite */
+    display: block; /* Flexbox pentru aliniere */
+    margin: 0 auto; /* Centrează imaginea pe orizontală */
+    margin-top: 20px; /* Distanțare de sus */
+}
+
+/* Stiluri pentru iconițele sociale */
+.social {
+    height: 30px; /* Înălțimea iconițelor */
+    display: block; /* Flexbox pentru aliniere */
+    margin: 0 auto; /* Centrează iconițele pe orizontală */
+    margin-left: 44px; /* Distanțare la stânga */
+    margin-right: 10px; /* Distanțare la dreapta */
+}
+
+/* Efect de hover pentru linkurile din nav */
+nav > a:hover {
+    transform: scale(1.1); /* Mărirea la hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Umbră la hover */
+}
+
+/* Stiluri pentru boxurile de conținut */
+.box {
+    background-color: #a6bb6c; /* Fundal verde deschis */
+    color: white; /* Text alb */
+    text-align: left; /* Aliniere la stânga */
+    padding: 20px; /* Padding interior */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră ușoară */
+    font-size: 18px; /* Mărimea fontului */
+    overflow: hidden; /* Ascunde conținutul care depășește dimensiunile */
+    height: auto; /* Înălțimea automată */
+    transition: max-height 1s ease, box-shadow 1s ease; /* Tranziții la hover */
+}
+
+/* Setează fundalul paginii */
+html {
+    background-color: burlywood; /* Fundal burlywood */
+}
+
+/* Stiluri pentru butonul dropdown */
+.dropbtn {
+    padding: 16px; /* Padding pentru buton */
+    font-size: 5px; /* Mărimea fontului */
+    border: none; /* Elimină bordura */
+    align-self: center; /* Centrează butonul */
+    background: #FAF4B7; /* Fundal galben deschis */
+}
+
+/* Stiluri pentru dropdown */
+.dropdown {
+    position: relative; /* Poziționare relativă pentru dropdown */
+    display: inline-block; /* Vizibil pe orizontală */
+}
+
+/* Stiluri pentru conținutul dropdown */
+.dropdown-content {
+    display: none; /* Ascunde dropdown-ul */
+    position: absolute; /* Poziționează absolut față de dropdown */
+    background-color: #f1f1f1; /* Fundal gri deschis */
+    min-width: 160px; /* Lățime minimă */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Umbră */
+    z-index: 1; /* Asigură că este deasupra altor elemente */
+}
+
+/* Stiluri pentru linkurile din dropdown */
+.dropdown-content a {
+    color: black; /* Culoare text negru */
+    padding: 12px 16px; /* Padding pentru fiecare link */
+    text-decoration: none; /* Elimină sublinierea */
+    display: block; /* Fiecare link este un bloc */
+}
+
+/* Efect de hover pentru linkurile din dropdown */
+.dropdown-content a:hover {
+    background-color: #eea3a3; /* Fundal roz la hover */
+}
+
+/* Arată dropdown-ul la hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afișează dropdown-ul */
+}
+
+/* Stiluri pentru responsive design la dispozitive mai mici */
+
+/* La dimensiuni de ecran sub 768px */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Aranjează elementele pe verticală */
+    }
+
+    main > nav {
+        flex: 0 0 100%; /* Lățimea nav-ului este 100% */
+        order: 1; /* Ordinea elementului este 1 */
+    }
+
+    main > aside {
+        flex: 0 0 100%; /* Lățimea aside-ului este 100% */
+        height: auto; /* Înălțime automată */
+        margin-right: 0; /* Elimină marginile dreapta */
+        margin-top: 20px; /* Distanțare de sus */
+    }
+
+    .container {
+        padding: 10px; /* Padding pentru container */
+    }
+
+    .box {
+        font-size: 16px; /* Mărimea fontului mai mică */
+        padding: 10px; /* Padding mai mic */
+    }
+
+    .content {
+        font-size: 18px; /* Mărimea fontului mai mică */
+    }
+
+    .home {
+        height: 30px; /* Înălțimea mai mică */
+    }
+
+    .titlu {
+        font-size: 20px; /* Mărimea fontului mai mică */
+        padding: 10px; /* Padding mai mic */
+        text-align: center; /* Centrează textul */
+    }
+
+    .subtitlu {
+        font-size: 18px; /* Mărimea fontului mai mică */
+    }
+
+    .Eu {
+        height: 4.5cm; /* Înălțimea mai mică */
+    }
+
+    .social {
+        height: 25px; /* Înălțimea iconițelor mai mică */
+        margin-left: 0.5cm; /* Distanțare mai mică la stânga */
+    }
+
+    .dropdown {
+        position: relative; /* Poziționare relativă */
+    }
+
+    .dropdown-content {
+        display: none; /* Ascunde dropdown-ul */
+        position: absolute;
+        background-color: #f1f1f1; /* Fundal gri deschis */
+        width: 100%; /* Lățime completă */
+        bottom: 100%; /* Se deschide deasupra butonului */
+        left: 0; /* Aliniere la stânga */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Umbră */
+        z-index: 10; /* Asigură că este deasupra altor elemente */
+        border-radius: 8px; /* Colțuri rotunjite */
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block; /* Afișează dropdown-ul la hover sau focus */
+    }
+
+    .dropbtn {
+        padding: 10px; /* Padding mai mare pentru buton */
+        font-size: 1.2em; /* Mărimea fontului mai mare */
+        position: relative; /* Poziționare relativă */
+        z-index: 1; /* Asigură că butonul este deasupra dropdown-ului */
+    }
+}
+
+/* La dimensiuni de ecran sub 480px */
+@media (max-width: 480px) {
+    .titlu {
+        font-size: 18px; /* Font mai mic */
+    }
+
+    .box {
+        font-size: 14px; /* Font mai mic */
+    }
+
+    .content {
+        font-size: 16px; /* Font mai mic */
+    }
+
+    .home {
+        height: 25px; /* Înălțimea mai mică */
+    }
+
+    .Eu {
+        height: 4cm; /* Înălțimea mai mică */
+    }
+
+    .social {
+        height: 20px; /* Înălțimea mai mică */
+    }
+
+    .subtitlu {
+        font-size: 16px; /* Font mai mic */
+    }
+}
+
+/* Stiluri pentru secțiunea animată */
+#animated-section {
+    margin: 0 auto 20px; /* Margină centrată și distanțare jos */
+    padding: 15px 0; /* Padding vertical */
+    background: #FAF4B7; /* Fundal galben deschis */
+    border-radius: 8px; /* Colțuri rotunjite */
+    text-align: center; /* Aliniere pe centru */
+    max-width: 800px; /* Lățime maximă */
+}
+
+/* Stiluri pentru tabelul de animație */
+#animation-table {
+    margin: 0 auto; /* Centrează tabelul pe orizontală */
+    border-collapse: collapse; /* Fuzionează granițele celulelor */
+    width: 90%; /* Lățime de 90% */
+    max-width: 600px; /* Lățime maximă */
+}
+
+/* Stiluri pentru celulele tabelului de animație */
+#animation-table td {
+    padding: 20px; /* Padding în celule */
+    font-size: 1.2em; /* Mărimea fontului */
+    font-weight: bold; /* Font îngroșat */
+    color: white; /* Culoare text albă */
+}
+
+/* Animație pentru matematică */
+.math-animation {
+    background-color: #6a994e; /* Fundal verde închis */
+    animation: math-bounce 3s infinite; /* Animație de salt continuu */
+}
+
+/* Keyframe pentru animația de salt */
+@keyframes math-bounce {
+    0%, 100% {
+        transform: translateY(0); /* Poziție inițială */
+    }
+    50% {
+        transform: translateY(-10px); /* Salt în sus */
+    }
+}
+
+/* Animație pentru cod */
+.info-animation {
+    background-color: #386fa4; /* Fundal albastru închis */
+    animation: code-rotate 4s infinite; /* Animație de rotație continuă */
+}
+
+/* Keyframe pentru animația de rotație */
+@keyframes code-rotate {
+    0% {
+        transform: rotate(0deg); /* Poziția inițială */
+    }
+    50% {
+        transform: rotate(10deg); /* Rotește la 10 grade */
+    }
+    100% {
+        transform: rotate(0deg); /* Revin la poziția inițială */
+    }
+}
+
+/* Animație pentru ecuații */
+.equation-animation {
+    background-color: #ff6f61; /* Fundal roșu */
+    animation: equation-scale 2.5s infinite; /* Animație de scalare continuă */
+}
+
+/* Keyframe pentru animația de scalare */
+@keyframes equation-scale {
+    0%, 100% {
+        transform: scale(1); /* Mărimea normală */
+    }
+    50% {
+        transform: scale(1.1); /* Scalare mai mare */
+    }
+}
+
+/* Animație pentru tipărire */
+.code-animation {
+    background-color: #c7b198; /* Fundal maro deschis */
+    animation: typing-blink 1.5s steps(2, end) infinite; /* Animație de tipărire cu blink */
+}
+
+/* Keyframe pentru animația de tipărire */
+@keyframes typing-blink {
+    0% {
+        background-color: #c7b198; /* Fundal inițial */
+    }
+    50% {
+        background-color: #9a8265; /* Fundal schimbat */
+    }
+    100% {
+        background-color: #c7b198; /* Fundal inițial */
+    }
+}
+
+/* Stiluri pentru tabelul de animație la dimensiuni de ecran mai mici */
+@media (max-width: 768px) {
+    #animation-table {
+        width: 100%; /* Lățime completă */
+        max-width: 100%; /* Lățime maximă completă */
+    }
+
+    #animation-table td {
+        font-size: 1.2em; /* Mărimea fontului */
+        padding: 15px; /* Padding mai mic */
+    }
+}
+
+/* La dimensiuni de ecran sub 576px */
+@media (max-width: 576px) {
+    #animation-table {
+        width: 100%; /* Lățime completă */
+    }
+
+    #animation-table td {
+        font-size: 1em; /* Font mai mic */
+        padding: 10px; /* Padding mai mic */
+    }
+}
+
+/* La dimensiuni de ecran mai mari de 769px */
+@media (min-width: 769px) {
+    #animated-section {
+        display: flex;
+        flex-direction: column; /* Coloană */
+        align-items: center; /* Aliniere pe centru */
+    }
+
+    #animation-table {
+        margin-bottom: 20px; /* Margine jos */
+    }
+}

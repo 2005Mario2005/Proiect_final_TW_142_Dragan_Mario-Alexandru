@@ -1,0 +1,106 @@
+/* Stilizarea corpului paginii */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Setează fontul */
+    background-color: #222; /* Fundal întunecat */
+    color: #fff; /* Text alb */
+    margin: 0; /* Elimină marginile implicite */
+    padding: 0; /* Elimină padding-ul implicit */
+    display: flex; /* Folosește Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    height: 100vh; /* Înălțimea totală a ferestrei browserului */
+    overflow: hidden; /* Evită scroll-ul */
+    flex-direction: column; /* Dispunere verticală */
+}
+
+/* Stilizare pentru canvas */
+canvas {
+    border: 1px solid #fff; /* Bordură albă pentru canvas */
+    display: block; /* Face ca canvas-ul să fie un element de bloc */
+}
+
+/* Stilizarea dropdown-ului */
+.dropdown {
+    position: absolute; /* Poziționează absolut față de părinte */
+    top: 10px; /* Plasează la 10px de sus */
+    left: 10px; /* Plasează la 10px de stânga */
+}
+
+/* Stilizarea butonului din dropdown */
+.dropbtn {
+    padding: 10px 20px; /* Spațiu în interiorul butonului */
+    font-size: 14px; /* Mărimea fontului */
+    border: none; /* Elimină bordura */
+    background-color: transparent; /* Fundal transparent */
+    color: #333; /* Culoarea textului */
+    cursor: pointer; /* Schimbă cursorul la hover */
+    border-radius: 4px; /* Colțuri rotunjite */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Umbra butonului */
+}
+
+/* Stilizarea conținutului din dropdown */
+.dropdown-content {
+    display: none; /* Inițial ascuns */
+    position: absolute; /* Poziționare absolută */
+    background-color: #e9deaf; /* Fundal deschis */
+    min-width: 160px; /* Lățimea minimă a dropdown-ului */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Umbra dropdown-ului */
+    z-index: 1; /* Pune dropdown-ul deasupra altor elemente */
+    border-radius: 4px; /* Colțuri rotunjite */
+}
+
+/* Stilizarea linkurilor din dropdown */
+.dropdown-content a {
+    color: #333; /* Culoarea textului */
+    padding: 12px 16px; /* Spațiu în jurul textului */
+    text-decoration: none; /* Elimină sublinierea */
+    display: block; /* Face linkurile blocuri */
+    font-size: 14px; /* Mărimea fontului */
+}
+
+/* Hover pentru linkurile din dropdown */
+.dropdown-content a:hover {
+    background-color: #ffd580; /* Fundal galben la hover */
+}
+
+/* Afișează dropdown-ul când butonul este hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afișează meniul la hover */
+}
+
+/* Schimbă culoarea butonului la hover */
+.dropbtn:hover {
+    background-color: gray; /* Fundal gri la hover */
+}
+
+/* Stilizarea secțiunii Home */
+.home {
+    height: 40px; /* Înălțimea secțiunii */
+    display: block; /* Comportament de bloc */
+    margin: 20px auto; /* Margină automată pe orizontală */
+}
+
+/* Stilizare pentru footer */
+footer {
+    text-align: center; /* Aliniază textul la centru */
+    display: flex; /* Flexbox pentru aliniere */
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    position: absolute; /* Poziționare absolută */
+    bottom: 0%; /* Așezat în partea de jos */
+}
+
+/* Stilizare pentru mesajul de informare */
+.informare {
+    color: lightcoral; /* Culoare coral pentru text */
+    display: inline; /* Afișare pe linie */
+    margin-right: 20px; /* Margine dreapta */
+    font-size: 20px; /* Mărimea fontului */
+}
+
+/* Buton special */
+.buton_special {
+    color: lightgreen; /* Culoare verde pentru buton */
+    margin-right: 20px; /* Margine dreapta */
+    font-size: 30px; /* Mărimea fontului */
+}
